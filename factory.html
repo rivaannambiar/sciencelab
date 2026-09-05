@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Molecular Factory | Science Lab</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="factory-page">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⚛</span>
+        SCIENCE<span>LAB</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="vault.html">Element Vault</a>
+        <a href="periodic.html">Periodic Table</a>
+        <a class="active" href="factory.html">Molecular Factory</a>
+        <a href="electron.html">Electron Arcade</a>
+      </div>
+    </nav>
+
+    <main class="factory-main">
+      <section class="factory-header">
+        <div>
+          <span class="section-number">MISSION 04</span>
+          <p>THE MOLECULAR FACTORY</p>
+
+          <h1>
+            Welcome to the
+            <span>molecule factory.</span>
+          </h1>
+
+          <p class="lead">
+            Take orders. Build molecules. Then fix the factory's broken
+            reactions.
+          </p>
+        </div>
+
+        <div class="factory-status">
+          <span>FACTORY STATUS</span>
+          <strong id="factoryStatus">READY</strong>
+        </div>
+      </section>
+
+      <section class="factory-floor" id="factoryFloor">
+        <div class="factory-machine machine-left">
+          <div class="machine-screen">ATOM MIXER</div>
+          <div class="machine-light"></div>
+          <div class="gear">⚙</div>
+        </div>
+
+        <div class="factory-center">
+          <div class="factory-pipe pipe-one"></div>
+          <div class="factory-pipe pipe-two"></div>
+
+          <div class="molecule-machine">
+            <div class="machine-top">MOLECULE BUILDER</div>
+
+            <div class="machine-window">
+              <div class="molecule-preview">
+                <span class="atom hydrogen"></span>
+                <span class="atom oxygen"></span>
+                <span class="atom hydrogen"></span>
+              </div>
+            </div>
+
+            <div class="machine-door">
+              <span>▼</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="factory-machine machine-right">
+          <div class="machine-screen">REACTION UNIT</div>
+          <div class="machine-light"></div>
+          <div class="gear">⚙</div>
+        </div>
+
+        <div class="conveyor">
+          <div class="conveyor-belt">
+            <div class="belt-item">H₂</div>
+            <div class="belt-item">O₂</div>
+            <div class="belt-item">H₂</div>
+            <div class="belt-item">O₂</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="factory-orders" id="ordersSection">
+        <div class="order-header">
+          <div>
+            <span class="section-number">PHASE 01</span>
+            <h2>Incoming orders.</h2>
+          </div>
+
+          <div class="order-count">
+            ORDER
+            <strong id="orderNumber">01 / 03</strong>
+          </div>
+        </div>
+
+        <div class="order-card">
+          <div class="order-ticket">
+            <span>🍽️ CUSTOMER ORDER</span>
+
+            <h3 id="orderTitle">Build the requested molecule.</h3>
+
+            <p id="orderDescription">
+              Create a substance containing the following elements.
+            </p>
+
+            <div class="order-target">
+              TARGET ATOMS
+
+              <div id="atomRequirements">
+                <span>H × 2</span>
+                <span>O × 1</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="molecule-builder">
+            <div class="formula-display">
+              <span id="formulaDisplay">?</span>
+            </div>
+
+            <div class="atom-buttons">
+              <button data-atom="H">
+                H
+                <small>Hydrogen</small>
+              </button>
+
+              <button data-atom="O">
+                O
+                <small>Oxygen</small>
+              </button>
+
+              <button data-atom="C">
+                C
+                <small>Carbon</small>
+              </button>
+            </div>
+
+            <button class="btn primary" id="submitMolecule">
+              SEND TO FACTORY →
+            </button>
+          </div>
+        </div>
+
+        <div class="serving-machine" id="servingMachine">
+          <div class="metal-cover">
+            <span>MOLECULE DELIVERY</span>
+          </div>
+
+          <div class="served-food">
+            <div class="served-molecule" id="servedMolecule">H₂O</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reaction-section" id="reactionSection">
+        <div class="reaction-header">
+          <div>
+            <span class="section-number">PHASE 02</span>
+            <p>FACTORY MALFUNCTION</p>
+
+            <h2>
+              Repair the
+              <span>reaction.</span>
+            </h2>
+          </div>
+
+          <div class="warning-light">⚠</div>
+        </div>
+
+        <div class="reaction-console">
+          <div class="broken-reaction">
+            <span>BROKEN REACTION</span>
+
+            <div class="reaction-equation">
+              <span>H₂</span>
+              <b>+</b>
+              <span>O₂</span>
+              <b>→</b>
+              <span>H₂O</span>
+            </div>
+
+            <strong>❌ UNBALANCED</strong>
+          </div>
+
+          <div class="coefficient-editor">
+            <div>
+              <button class="coef-minus" data-index="0">−</button>
+              <strong id="coef0">1</strong>
+              <button class="coef-plus" data-index="0">+</button>
+              <span>H₂</span>
+            </div>
+
+            <b>+</b>
+
+            <div>
+              <button class="coef-minus" data-index="1">−</button>
+              <strong id="coef1">1</strong>
+              <button class="coef-plus" data-index="1">+</button>
+              <span>O₂</span>
+            </div>
+
+            <b>→</b>
+
+            <div>
+              <button class="coef-minus" data-index="2">−</button>
+              <strong id="coef2">1</strong>
+              <button class="coef-plus" data-index="2">+</button>
+              <span>H₂O</span>
+            </div>
+          </div>
+
+          <div class="fixed-equation" id="fixedEquation">1H₂ + 1O₂ → 1H₂O</div>
+
+          <button class="btn primary" id="repairReaction">
+            ⚙ REPAIR REACTION
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="simulations.js"></script>
+  </body>
+</html>

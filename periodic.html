@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Periodic Table | Science Lab</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="periodic-page">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⚛</span>
+        SCIENCE<span>LAB</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="vault.html">Element Vault</a>
+        <a class="active" href="periodic.html">Periodic Table</a>
+        <a href="factory.html">Molecular Factory</a>
+        <a href="electron.html">Electron Arcade</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="periodic-header">
+        <div>
+          <span class="section-number">ELEMENT DATABASE</span>
+          <p>THE PERIODIC TABLE</p>
+
+          <h1>
+            Every element.
+            <span>One table.</span>
+          </h1>
+        </div>
+
+        <div class="element-search">
+          <input
+            id="elementSearch"
+            type="text"
+            placeholder="Search element..."
+          />
+          <span>⌕</span>
+        </div>
+      </section>
+
+      <section class="periodic-layout">
+        <div class="periodic-wrapper">
+          <div class="periodic-legend">
+            <span><i class="legend-metal"></i> Metals</span>
+            <span><i class="legend-nonmetal"></i> Nonmetals</span>
+            <span><i class="legend-metalloid"></i> Metalloids</span>
+            <span><i class="legend-noble"></i> Noble gases</span>
+          </div>
+
+          <div id="periodicTable" class="periodic-table"></div>
+        </div>
+
+        <aside class="element-inspector" id="elementInspector">
+          <div class="inspector-placeholder">
+            <span>⚛</span>
+            <h2>Select an element</h2>
+            <p>Click any element to inspect its atomic structure.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="vault.js"></script>
+  </body>
+</html>

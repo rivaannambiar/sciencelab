@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Element Vault | Science Lab</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="vault-page">
+    <div class="background-orbs">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⚛</span>
+        SCIENCE<span>LAB</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="vault.html">Element Vault</a>
+        <a href="periodic.html">Periodic Table</a>
+        <a href="factory.html">Molecular Factory</a>
+        <a href="electron.html">Electron Arcade</a>
+      </div>
+
+      <div class="progress-pill">SCORE <b id="vaultScore">0</b></div>
+    </nav>
+
+    <main class="vault-main">
+      <section class="vault-header">
+        <div>
+          <span class="section-number">MISSION 02</span>
+          <p>THE ELEMENT HEIST</p>
+
+          <h1>
+            Crack the
+            <span>Element Vault.</span>
+          </h1>
+
+          <p class="lead">
+            The vault is locked. The clues are inside. Your knowledge is the
+            key.
+          </p>
+        </div>
+
+        <div class="vault-lock" id="vaultLock">🔐</div>
+      </section>
+
+      <section class="case-panel">
+        <div class="case-top">
+          <div>
+            <span>CASE FILE</span>
+            <strong id="questionNumber">01 / 08</strong>
+          </div>
+
+          <div class="streak">
+            STREAK
+            <b id="streak">0</b>
+          </div>
+
+          <div class="score">
+            SCORE
+            <b id="score">0</b>
+          </div>
+        </div>
+
+        <div class="case-content">
+          <div class="case-file">
+            <span class="file-label">CLASSIFIED ATOMIC DATA</span>
+
+            <div id="questionText">
+              An atom contains
+              <strong>3 protons</strong>, <strong>3 neutrons</strong> and
+              <strong>3 electrons</strong>. <br /><br />
+              Which element is it?
+            </div>
+          </div>
+
+          <div class="answers" id="answers">
+            <button class="answer" data-answer="Lithium">
+              <span>A</span>
+              Lithium
+            </button>
+
+            <button class="answer" data-answer="Carbon">
+              <span>B</span>
+              Carbon
+            </button>
+
+            <button class="answer" data-answer="Helium">
+              <span>C</span>
+              Helium
+            </button>
+
+            <button class="answer" data-answer="Oxygen">
+              <span>D</span>
+              Oxygen
+            </button>
+          </div>
+        </div>
+
+        <div class="answer-feedback" id="feedback">
+          <span id="feedbackIcon">⚛</span>
+          <div>
+            <strong id="feedbackTitle">AWAITING ANSWER</strong>
+            <p id="feedbackText">Choose an option to inspect the evidence.</p>
+          </div>
+        </div>
+
+        <button class="next-question btn primary" id="nextQuestion">
+          NEXT CASE →
+        </button>
+      </section>
+
+      <section class="vault-tools">
+        <a href="periodic.html" class="tool-card">
+          <span>🧪</span>
+          <div>
+            <strong>Periodic Table</strong>
+            <small>Inspect every element.</small>
+          </div>
+          <b>→</b>
+        </a>
+
+        <div class="tool-card">
+          <span>⚛</span>
+          <div>
+            <strong>Atomic Number</strong>
+            <small>Number of protons = atomic number.</small>
+          </div>
+          <b>#</b>
+        </div>
+
+        <div class="tool-card">
+          <span>⚡</span>
+          <div>
+            <strong>Electron Config</strong>
+            <small>Follow the Aufbau filling order.</small>
+          </div>
+          <b>→</b>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="vault.js"></script>
+  </body>
+</html>

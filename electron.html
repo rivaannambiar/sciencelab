@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electron Arcade | Science Lab</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="electron-page">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⚛</span>
+        SCIENCE<span>LAB</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="vault.html">Element Vault</a>
+        <a href="periodic.html">Periodic Table</a>
+        <a href="factory.html">Molecular Factory</a>
+        <a class="active" href="electron.html">Electron Arcade</a>
+      </div>
+    </nav>
+
+    <main class="electron-main">
+      <section class="electron-header">
+        <div>
+          <span class="section-number">MISSION 03</span>
+          <p>THE ELECTRON ARCADE</p>
+
+          <h1>
+            Give an electron
+            <span>some energy.</span>
+          </h1>
+
+          <p class="lead">
+            Watch what happens when an electron absorbs energy — and then gives
+            it back.
+          </p>
+        </div>
+
+        <div class="energy-meter">
+          <span>ENERGY</span>
+          <div>
+            <i id="energyFill"></i>
+          </div>
+          <b id="energyValue">LOW</b>
+        </div>
+      </section>
+
+      <section class="electron-simulator">
+        <div class="simulation-label">ATOM SIMULATION</div>
+
+        <div class="atom-simulation" id="atomSimulation">
+          <div class="energy-level level-1">
+            <span>E₁</span>
+          </div>
+
+          <div class="energy-level level-2">
+            <span>E₂</span>
+          </div>
+
+          <div class="energy-level level-3">
+            <span>E₃</span>
+          </div>
+
+          <div class="simulation-nucleus">
+            <span>+</span>
+            <span>+</span>
+            <span>+</span>
+          </div>
+
+          <div id="simElectron" class="simulation-electron">e⁻</div>
+
+          <div id="photon" class="photon">✦</div>
+
+          <div id="excitedMessage" class="excited-message">
+            WOOOOOOO! ENERGY!!! ⚡😂
+          </div>
+        </div>
+
+        <div class="simulation-status">
+          <div>
+            <span>STATE</span>
+            <strong id="electronState"> GROUND STATE </strong>
+          </div>
+
+          <div>
+            <span>ENERGY LEVEL</span>
+            <strong id="electronLevel">E₁</strong>
+          </div>
+
+          <div>
+            <span>PHOTON</span>
+            <strong id="photonStatus">NONE</strong>
+          </div>
+        </div>
+
+        <div class="simulation-controls">
+          <button class="btn primary" id="energizeBtn">⚡ GIVE ENERGY</button>
+
+          <button class="btn secondary" id="releaseBtn">
+            ✨ RELEASE PHOTON
+          </button>
+
+          <button class="btn ghost" id="resetElectron">↻ RESET</button>
+        </div>
+      </section>
+
+      <section class="electron-explanation">
+        <div class="explanation-card">
+          <span>01</span>
+          <strong>ABSORB</strong>
+          <p>
+            The electron absorbs energy from a photon and moves to a higher
+            energy level.
+          </p>
+        </div>
+
+        <div class="explanation-arrow">→</div>
+
+        <div class="explanation-card excited-card">
+          <span>02</span>
+          <strong>GET EXCITED 😂</strong>
+          <p>The electron is temporarily in an excited, higher-energy state.</p>
+        </div>
+
+        <div class="explanation-arrow">→</div>
+
+        <div class="explanation-card">
+          <span>03</span>
+          <strong>EMIT</strong>
+          <p>The electron falls back down and releases energy as a photon.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="simulations.js"></script>
+  </body>
+</html>
