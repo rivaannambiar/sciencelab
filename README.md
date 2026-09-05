@@ -241,7 +241,7 @@ SCIENCE-LAB/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone rivaannambiar.github.io/sciencelab
 ```
 
 ### 2️⃣ Open the project
